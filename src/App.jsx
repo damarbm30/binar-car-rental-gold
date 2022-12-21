@@ -1,10 +1,17 @@
-import "./App.css";
+import { Footer, Navbar } from "./components";
+import { FAQ, Header, Services, Testimonial, WhyUs } from "./pages";
 
 function App() {
   return (
-    <div className="App">
-      <p>App</p>
-    </div>
+    <>
+      <Navbar />
+      <Header />
+      <Services />
+      <WhyUs />
+      <Testimonial />
+      <FAQ />
+      <Footer />
+    </>
   );
 }
 
