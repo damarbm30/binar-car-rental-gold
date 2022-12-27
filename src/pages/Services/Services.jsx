@@ -3,9 +3,9 @@ import { check, service } from "../../assets";
 const Services = () => {
   return (
     <section id="services" className="container section-pt">
-      <div className="row align-items-center justify-content-center">
-        <img src={service} alt="service" className="col-5" />
-        <div className="col-5 offset-1">
+      <div className="row align-items-center justify-content-around">
+        <img src={service} alt="service" className="col-5 img-fluid" />
+        <div className="col-5">
           <h1 className="fs-4 fw-bold">Best Car Rental for any kind of trip in Yogyakarta!</h1>
           <p className="fw-bold">
             Sewa mobil di Yogyakarta bersama Binar Car Rental jaminan harga lebih murah dibandingkan yang lain, kondisi
