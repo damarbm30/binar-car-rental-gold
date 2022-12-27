@@ -16,3 +16,7 @@
 .btn-green:hover {
   background-color: var(--green-50) !important;
 }
+
+.section-pt {
+  padding-top: 6.25em;
+}
