@@ -1,0 +1,7 @@
+.header {
+  background-color: var(--bgColor);
+}
+
+.header__item {
+  margin-left: 8.5rem !important;
+}

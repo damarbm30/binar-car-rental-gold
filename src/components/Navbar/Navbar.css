@@ -1,0 +1,13 @@
+.navbar-brand {
+  padding-left: 8.5em;
+}
+
+.navbar-nav {
+  padding-right: 15.5625em;
+}
+
+@media only screen and (max-width: 576px) {
+  .navbar-brand {
+    padding-left: 0;
+  }
+}

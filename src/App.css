@@ -1,0 +1,18 @@
+:root {
+  --bgColor: #f1f3ff;
+  --green: rgba(92, 184, 95, 1);
+  --green-50: rgba(92, 184, 95, 0.5);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.btn-green {
+  background-color: var(--green) !important;
+}
+
+.btn-green:hover {
+  background-color: var(--green-50) !important;
+}
