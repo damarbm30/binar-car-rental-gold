@@ -16,11 +16,11 @@ const Services = () => {
         <img src={service} alt="service" className="col-5 img-fluid" />
         <div className="col-5">
           <h1 className="fs-4 fw-bold">Best Car Rental for any kind of trip in Yogyakarta!</h1>
-          <p className="fw-bold">
+          <p className="fw-bold mt-3">
             Sewa mobil di Yogyakarta bersama Binar Car Rental jaminan harga lebih murah dibandingkan yang lain, kondisi
             mobil baru, serta kualitas pelayanan terbaik untuk perjalanan wisata, bisnis, wedding, meeting, dll.
           </p>
-          <ul className="ps-0">
+          <ul className="ps-0 mt-3">
             <ItemList>Sewa Mobil Dengan Supir di Bali 12 Jam</ItemList>
             <ItemList>Sewa Mobil Lepas Kunci di Bali 24 Jam</ItemList>
             <ItemList>Sewa Mobil Jangka Panjang Bulanan</ItemList>
