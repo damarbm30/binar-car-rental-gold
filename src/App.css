@@ -9,6 +9,11 @@
   margin: 0;
 }
 
+p {
+  font-size: 0.875rem;
+  margin-bottom: 0 !important;
+}
+
 .btn-green {
   background-color: var(--green) !important;
 }
