@@ -1,5 +1,14 @@
 import { check, service } from "../../assets";
 
+const ItemList = ({ children }) => {
+  return (
+    <li className="d-flex align-items-center gap-3 mb-3">
+      <img src={check} alt="check" />
+      <p className="mb-0 fw-bold">{children}</p>
+    </li>
+  );
+};
+
 const Services = () => {
   return (
     <section id="services" className="container section-pt">
@@ -12,26 +21,11 @@ const Services = () => {
             mobil baru, serta kualitas pelayanan terbaik untuk perjalanan wisata, bisnis, wedding, meeting, dll.
           </p>
           <ul className="ps-0">
-            <li className="d-flex align-items-center gap-3 mb-3">
-              <img src={check} alt="check" />
-              <p className="mb-0 fw-bold">Sewa Mobil Dengan Supir di Bali 12 Jam</p>
-            </li>
-            <li className="d-flex align-items-center gap-3 mb-3">
-              <img src={check} alt="check" />
-              <p className="mb-0 fw-bold">Sewa Mobil Lepas Kunci di Bali 24 Jam</p>
-            </li>
-            <li className="d-flex align-items-center gap-3 mb-3">
-              <img src={check} alt="check" />
-              <p className="mb-0 fw-bold">Sewa Mobil Jangka Panjang Bulanan</p>
-            </li>
-            <li className="d-flex align-items-center gap-3 mb-3">
-              <img src={check} alt="check" />
-              <p className="mb-0 fw-bold">Gratis Antar - Jemput Mobil di Bandara</p>
-            </li>
-            <li className="d-flex align-items-center gap-3 mb-3">
-              <img src={check} alt="check" />
-              <p className="mb-0 fw-bold">Layanan Airport Transfer / Drop In Out</p>
-            </li>
+            <ItemList>Sewa Mobil Dengan Supir di Bali 12 Jam</ItemList>
+            <ItemList>Sewa Mobil Lepas Kunci di Bali 24 Jam</ItemList>
+            <ItemList>Sewa Mobil Jangka Panjang Bulanan</ItemList>
+            <ItemList>Gratis Antar - Jemput Mobil di Bandara</ItemList>
+            <ItemList>Layanan Airport Transfer / Drop In Out</ItemList>
           </ul>
         </div>
       </div>
