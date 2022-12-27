@@ -8,8 +8,8 @@ const Header = () => {
       <Navbar />
       <div className="header__items row align-items-center">
         <div className="header__item col">
-          <h1 className="mb-0">Sewa & Rental Mobil Terbaik di kawasan Yogyakarta</h1>
-          <p className="col-9 mt-3 text-dark">
+          <h1 className="mb-0 fw-bold">Sewa & Rental Mobil Terbaik di kawasan Yogyakarta</h1>
+          <p className="col-9 mt-3 text-dark fw-bold">
             Selamat datang di Binar Car Rental. Kami menyediakan mobil kualitas terbaik dengan harga terjangkau. Selalu
             siap melayani kebutuhanmu untuk sewa mobil selama 24 jam.
           </p>
