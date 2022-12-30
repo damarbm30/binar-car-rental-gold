@@ -1,13 +1,25 @@
-.navbar-brand {
-  padding-left: 8.5em;
+.navbar {
+  background-color: var(--bgColor);
 }
 
-.navbar-nav {
-  padding-right: 15.5625em;
+/* .navbar-brand {
+  margin-left: 5rem;
 }
 
 @media only screen and (max-width: 576px) {
   .navbar-brand {
-    padding-left: 0;
+    margin-left: 0rem !important;
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .navbar-brand {
+    margin-left: 2rem;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .navbar-brand {
+    margin-left: 4rem;
+  }
+} */
