@@ -3,8 +3,8 @@ import "./Navbar.css";
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg sticky-top py-3">
-      <div className="container-fluid justify-content-start">
-        <a className="navbar-brand offset-1" href="#">
+      <div className="container-fluid justify-content-start-md">
+        <a className="navbar-brand offset-md-1" href="#">
           Car Rental
         </a>
         <button
@@ -19,7 +19,7 @@ const Navbar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav offset-lg-8 offset-1">
+          <ul className="navbar-nav offset-lg-8">
             <li className="nav-item">
               <a className="nav-link text-black" href="#services">
                 Our Services
