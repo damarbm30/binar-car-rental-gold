@@ -15,8 +15,8 @@ const Card = ({ title, img, children }) => {
 const WhyUs = () => {
   return (
     <section className="container section-pt">
-      <h1 className="fs-3 text-sm-center text-md-start">Why Us?</h1>
-      <p className="fw-bold mt-3 text-sm-center text-md-start">Mengapa harus pilih Binar Car Rental?</p>
+      <h1 className="fs-3 text-center text-md-start">Why Us?</h1>
+      <p className="fw-bold mt-3 text-center text-md-start">Mengapa harus pilih Binar Car Rental?</p>
       <div className="d-md-flex flex-column-sm gap-4">
         <Card title="Mobil Lengkap" img={like}>
           Tersedia banyak pilihan mobil, kondisi masih baru, bersih, dan terawat
