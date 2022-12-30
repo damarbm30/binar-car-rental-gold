@@ -13,8 +13,8 @@ const Services = () => {
   return (
     <section id="services" className="container section-pt">
       <div className="row align-items-center justify-content-around">
-        <img src={service} alt="service" className="col-5 img-fluid" />
-        <div className="col-5">
+        <img src={service} alt="service" className="col-md-5 img-fluid" />
+        <div className="col-md-5 mt-3 mt-md-0">
           <h1 className="fs-4 fw-bold">Best Car Rental for any kind of trip in Yogyakarta!</h1>
           <p className="fw-bold mt-3">
             Sewa mobil di Yogyakarta bersama Binar Car Rental jaminan harga lebih murah dibandingkan yang lain, kondisi
