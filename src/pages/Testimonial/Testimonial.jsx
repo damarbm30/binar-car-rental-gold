@@ -1,23 +1,50 @@
-import { useState } from "react";
 import "./Testimonial.css";
-import { testimonials } from "../../utils/data";
+import TestimonialCard from "./TestimonialCard";
 
 const Testimonial = () => {
-  const [currentSlide, setCurrentSlide] = useState(1);
-
-  const handleCarousel = (direction) => {
-    direction === "left"
-      ? setCurrentSlide(currentSlide > 0 ? currentSlide - 2 : testimonials.length + 1)
-      : setCurrentSlide(currentSlide < testimonials.length ? currentSlide + 2 : -1);
-  };
-
   return (
     <section className="container-fluid section-pt testimonial">
       <div className="text-center">
         <h2 className="fw-bold mb-3">Testimonial</h2>
         <p className="fw-bold mb-5">Berbagai review positif dari pelanggan kami</p>
       </div>
-      <div className="slider-container">
+      {/* Smaller than XL */}
+      <div id="carouselExampleControls" className="carousel carousel-dark slide" data-bs-ride="false">
+        <div className="carousel-inner">
+          <div className="carousel-item active">
+            <div className="col-sm-4 col-xs-12">
+              <TestimonialCard />
+            </div>
+          </div>
+          <div className="carousel-item">
+            <div className="col-sm-4 col-xs-12">
+              <TestimonialCard />
+            </div>
+          </div>
+        </div>
+        <div className="d-flex justify-content-center gap-3 mt-5">
+          <button
+            className="carousel-control-prev rounded-circle position-relative p-3"
+            type="button"
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev"
+          >
+            <span className="carousel-control-prev-icon rounded-circle" aria-hidden="true"></span>
+            <span className="visually-hidden">Previous</span>
+          </button>
+          <button
+            className="carousel-control-next rounded-circle position-relative p-3"
+            type="button"
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="next"
+          >
+            <span className="carousel-control-next-icon rounded-circle" aria-hidden="true"></span>
+            <span className="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      {/* Larger than XL */}
+      {/* <div className="slider-container">
         <div
           className="slider"
           style={{ transform: currentSlide === -1 ? `translateX(25vw)` : `translateX(-${currentSlide * 25}vw)` }}
@@ -25,7 +52,7 @@ const Testimonial = () => {
           {testimonials.map((item) => {
             const { id, avatar, body, info } = item;
             return (
-              <div className="card-container" key={id}>
+              <div className="card-container d-none d-xl-block" key={id}>
                 <div className="card card-slider-wrapper">
                   <div className="card-body card-slider">
                     <div>
@@ -43,7 +70,7 @@ const Testimonial = () => {
           })}
         </div>
       </div>
-      <div className="d-flex flex-col gap-3">
+      <div className="d-none d-xl-flex flex-col gap-3">
         <button
           className="d-flex justify-content-center items-center rounded-circle arrow"
           onClick={() => handleCarousel("left")}
@@ -58,7 +85,7 @@ const Testimonial = () => {
         >
           <i className="bi bi-chevron-right" />
         </button>
-      </div>
+      </div> */}
     </section>
   );
 };
