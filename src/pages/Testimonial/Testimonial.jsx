@@ -1,5 +1,6 @@
 import "./Testimonial.css";
 import TestimonialCard from "./TestimonialCard";
+import { testimonials } from "../../utils/data";
 
 const Testimonial = () => {
   return (
@@ -11,16 +12,10 @@ const Testimonial = () => {
       {/* Smaller than XL */}
       <div id="carouselExampleControls" className="carousel carousel-dark slide" data-bs-ride="false">
         <div className="carousel-inner">
-          <div className="carousel-item active">
-            <div className="col-sm-4 col-xs-12">
-              <TestimonialCard />
-            </div>
-          </div>
-          <div className="carousel-item">
-            <div className="col-sm-4 col-xs-12">
-              <TestimonialCard />
-            </div>
-          </div>
+          {testimonials.map((testimonial) => {
+            const { id, avatar, body, info } = testimonial;
+            return <TestimonialCard id={id} avatar={avatar} body={body} info={info} />;
+          })}
         </div>
         <div className="d-flex justify-content-center gap-3 mt-5">
           <button
