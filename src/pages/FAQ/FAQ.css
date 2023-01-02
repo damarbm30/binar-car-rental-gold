@@ -1,0 +1,28 @@
+.accordion {
+  --bs-accordion-border-width: 0px !important;
+}
+
+.accordion-button:not(.collapsed) {
+  border: 1px solid lightgray !important;
+  color: black !important;
+  background-color: transparent !important;
+  box-shadow: 0 !important;
+}
+
+.accordion-faq {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.accordion-button:focus {
+  border-color: transparent !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.accordion-button-idle,
+.accordion-item-open {
+  border: 1px solid lightgray !important;
+  border-radius: 4px !important;
+}
