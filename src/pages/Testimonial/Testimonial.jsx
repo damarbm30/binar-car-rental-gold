@@ -14,7 +14,7 @@ const Testimonial = () => {
         <div className="carousel-inner">
           {testimonials.map((testimonial) => {
             const { id, avatar, body, info, isActive } = testimonial;
-            return <TestimonialCard id={id} avatar={avatar} body={body} info={info} isActive={isActive} />;
+            return <TestimonialCard id={id} avatar={avatar} body={body} info={info} isActive={isActive} key={id} />;
           })}
         </div>
         <div className="d-flex justify-content-center gap-3 mt-5">
