@@ -1,28 +1,14 @@
-.accordion {
-  --bs-accordion-border-width: 0px !important;
-}
-
 .accordion-button:not(.collapsed) {
-  border: 1px solid lightgray !important;
   color: black !important;
   background-color: transparent !important;
-  box-shadow: 0 !important;
-}
-
-.accordion-faq {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color);
 }
 
 .accordion-button:focus {
-  border-color: transparent !important;
-  outline: none !important;
   box-shadow: none !important;
 }
 
-.accordion-button-idle,
-.accordion-item-open {
-  border: 1px solid lightgray !important;
+.accordion-item {
   border-radius: 4px !important;
+  border: 2px solid lightgray !important;
 }
