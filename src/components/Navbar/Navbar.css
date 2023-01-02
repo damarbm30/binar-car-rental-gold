@@ -2,7 +2,7 @@
   background-color: var(--bgColor);
 }
 
-.show {
+nav > div > .show {
   width: 200px;
   z-index: 1000;
   left: 0;
