@@ -1,5 +1,5 @@
 import { Footer } from "./components";
-import { FAQ, Header, Services, Testimonial, WhyUs } from "./pages";
+import { CTA, FAQ, Header, Services, Testimonial, WhyUs } from "./pages";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
@@ -11,6 +11,7 @@ function App() {
       <Services />
       <WhyUs />
       <Testimonial />
+      <CTA />
       <FAQ />
       <Footer />
     </>
