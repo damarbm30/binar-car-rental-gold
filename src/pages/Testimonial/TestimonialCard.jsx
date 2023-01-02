@@ -1,9 +1,9 @@
 import "./Testimonial.css";
 
-const TestimonialCard = ({ id, avatar, body, info }) => {
+const TestimonialCard = ({ id, avatar, body, info, isActive }) => {
   return (
-    <div className="carousel-item active" key={id}>
-      <div className="col-sm-4 col-xs-12">
+    <div className={`carousel-item ${isActive === "active" ? `active` : ""}`} key={id}>
+      <div className="col-md-6 col-xs-12 mx-auto">
         <div className="card">
           <div className="card-body d-flex align-items-center gap-3">
             <img src={avatar} alt="avatar" className="rounded-circle" />

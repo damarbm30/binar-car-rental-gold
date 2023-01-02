@@ -13,8 +13,8 @@ const Testimonial = () => {
       <div id="carouselExampleControls" className="carousel carousel-dark slide" data-bs-ride="false">
         <div className="carousel-inner">
           {testimonials.map((testimonial) => {
-            const { id, avatar, body, info } = testimonial;
-            return <TestimonialCard id={id} avatar={avatar} body={body} info={info} />;
+            const { id, avatar, body, info, isActive } = testimonial;
+            return <TestimonialCard id={id} avatar={avatar} body={body} info={info} isActive={isActive} />;
           })}
         </div>
         <div className="d-flex justify-content-center gap-3 mt-5">
