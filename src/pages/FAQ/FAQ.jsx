@@ -17,32 +17,79 @@ const FAQ = () => {
           </p>
         </div>
         <div className="col-md-8 col-12 mt-3 mt-md-0">
-          <div className="accordion accordion-faq" id="accordionFlushExample">
-            <div
-              className={`accordion-item ${isOpen ? "accordion-button-idle" : ""}`}
-              onClick={() => setIsOpen(!isOpen)}
-            >
-              <h2 className="accordion-header" id="flush-headingOne">
+          <div className="accordion d-flex flex-column gap-3" id="accordionExample">
+            <div className="accordion-item">
+              <h2 className="accordion-header" id="headingOne">
                 <button
-                  className={`accordion-button collapsed ${!isOpen ? "accordion-button-idle" : ""}`}
+                  className="accordion-button collapsed fw-bold"
                   type="button"
                   data-bs-toggle="collapse"
-                  data-bs-target="#flush-collapseOne"
+                  data-bs-target="#collapseOne"
                   aria-expanded="false"
-                  aria-controls="flush-collapseOne"
+                  aria-controls="collapseOne"
                 >
-                  Accordion Item #1
+                  Apa saja syarat yang dibutuhkan?
                 </button>
               </h2>
               <div
-                id="flush-collapseOne"
+                id="collapseOne"
                 className="accordion-collapse collapse"
-                aria-labelledby="flush-headingOne"
-                data-bs-parent="#accordionFlushExample"
+                aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample"
               >
-                <div className="accordion-body rounded">
-                  Placeholder content for this accordion, which is intended to demonstrate the{" "}
-                  <code>.accordion-flush</code> className. This is the first item's accordion body.
+                <div className="accordion-body">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit necessitatibus ratione illo voluptates
+                  cupiditate. Explicabo repellendus aliquam voluptatem architecto dignissimos.
+                </div>
+              </div>
+            </div>
+            <div className="accordion-item">
+              <h2 className="accordion-header" id="headingTwo">
+                <button
+                  className="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                >
+                  Berapa hari minimal sewa mobil lepas kunci?
+                </button>
+              </h2>
+              <div
+                id="collapseTwo"
+                className="accordion-collapse collapse"
+                aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample"
+              >
+                <div className="accordion-body">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quis optio eveniet libero sunt nam modi
+                  harum similique a nulla?
+                </div>
+              </div>
+            </div>
+            <div className="accordion-item">
+              <h2 className="accordion-header" id="headingThree">
+                <button
+                  className="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree"
+                >
+                  Berapa hari sebelumnya sebaiknya booking sewa mobil?
+                </button>
+              </h2>
+              <div
+                id="collapseThree"
+                className="accordion-collapse collapse"
+                aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample"
+              >
+                <div className="accordion-body">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit recusandae debitis quasi qui
+                  natus, labore ad dolorem hic nihil harum.
                 </div>
               </div>
             </div>
