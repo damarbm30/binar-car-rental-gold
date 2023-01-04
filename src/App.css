@@ -36,8 +36,16 @@ h2 {
   padding-top: 6.25em;
 }
 
+.section-pb {
+  padding-bottom: 6.25em;
+}
+
 @media only screen and (max-width: 768px) {
   .section-pt {
     padding-top: 3.75em;
+  }
+
+  .section-pb {
+    padding-bottom: 3.75em;
   }
 }
