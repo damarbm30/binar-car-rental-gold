@@ -3,7 +3,7 @@ import "./Navbar.css";
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg sticky-top py-3 shadow-sm">
+    <nav className="navbar navbar-expand-lg sticky-top py-3 shadow-md-sm">
       <div className="container-fluid justify-content-start-md">
         <a className="navbar-brand offset-md-1" href="#">
           <img src={logo} alt="logo" />
@@ -27,17 +27,17 @@ const Navbar = () => {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-black" href="#">
+              <a className="nav-link text-black" href="#whyus">
                 Why Us
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-black" href="#">
+              <a className="nav-link text-black" href="#testimonial">
                 Testimonial
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-black" href="#">
+              <a className="nav-link text-black" href="#faq">
                 FAQ
               </a>
             </li>
