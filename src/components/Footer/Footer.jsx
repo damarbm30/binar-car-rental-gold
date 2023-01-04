@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import { facebook, instagram, twitter, mail, twitch, logo } from "../../assets";
 
 const Footer = () => {
@@ -10,9 +12,9 @@ const Footer = () => {
           <p className="fw-bold fs-6">081-233-334-808</p>
         </div>
         <div className="d-flex flex-column col-md-2 offset-md-1 gap-2">
-          <a href="#services" className="text-decoration-none text-black">
+          <Link to="#services" className="text-decoration-none text-black">
             Our Services
-          </a>
+          </Link>
           <a href="#whyus" className="text-decoration-none text-black">
             Why Us
           </a>
