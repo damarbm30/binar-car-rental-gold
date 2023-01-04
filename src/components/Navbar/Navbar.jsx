@@ -3,7 +3,7 @@ import "./Navbar.css";
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg sticky-top py-3">
+    <nav className="navbar navbar-expand-lg sticky-top py-3 shadow-sm">
       <div className="container-fluid justify-content-start-md">
         <a className="navbar-brand offset-md-1" href="#">
           <img src={logo} alt="logo" />
