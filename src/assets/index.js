@@ -10,5 +10,6 @@ import twitch from "./icon_twitch.svg";
 import twitter from "./icon_twitter.svg";
 import car from "./img_car.svg";
 import service from "./img_service.svg";
+import logo from "./logo.svg";
 
-export { time, check, like, facebook, instagram, mail, price, professional, twitch, twitter, car, service };
+export { time, check, like, facebook, instagram, mail, price, professional, twitch, twitter, car, service, logo };
