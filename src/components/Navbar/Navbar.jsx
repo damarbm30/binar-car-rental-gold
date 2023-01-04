@@ -1,3 +1,4 @@
+import { logo } from "../../assets";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -5,7 +6,7 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg sticky-top py-3">
       <div className="container-fluid justify-content-start-md">
         <a className="navbar-brand offset-md-1" href="#">
-          Car Rental
+          <img src={logo} alt="logo" />
         </a>
         <button
           className="navbar-toggler offset-sm-8 offset-5"
