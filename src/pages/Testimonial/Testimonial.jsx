@@ -4,7 +4,7 @@ import { testimonials } from "../../utils/data";
 
 const Testimonial = () => {
   return (
-    <section className="container-fluid section-pt testimonial">
+    <section id="testimonial" className="container-fluid section-pt testimonial">
       <div className="text-center">
         <h2 className="fw-bold mb-3">Testimonial</h2>
         <p className="fw-bold mb-5">Berbagai review positif dari pelanggan kami</p>

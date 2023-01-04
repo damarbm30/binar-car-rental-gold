@@ -4,7 +4,7 @@ import { faqs } from "../../constants";
 
 const FAQ = () => {
   return (
-    <section className="container section-pt">
+    <section id="faq" className="container section-pt">
       <div className="row">
         <div className="d-flex flex-column col-md-4 col-12 fs-2">
           <h1 className="fs-3 fw-bold text-center text-md-start">Frequently Asked Questions</h1>
