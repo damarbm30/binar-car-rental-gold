@@ -1,3 +1,5 @@
+import { BrowserRouter as Routes, Route } from "react-router-dom";
+
 import { Footer } from "./components";
 import { CTA, FAQ, Header, Services, Testimonial, WhyUs } from "./pages";
 import "./App.css";
