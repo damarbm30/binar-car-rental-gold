@@ -1,11 +1,9 @@
-import { Navbar } from "../../components";
 import "./Header.css";
 import { car } from "../../assets/index";
 
 const Header = () => {
   return (
     <>
-      <Navbar />
       <header className="header">
         <div className="container-fluid">
           <div className="header__items row align-items-center justify-content-end">
