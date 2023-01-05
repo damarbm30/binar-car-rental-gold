@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./CTA.css";
 
 const CTA = () => {
@@ -10,9 +11,11 @@ const CTA = () => {
           magna aliqua.
         </p>
         <div>
-          <button role="button" className="btn btn btn-green text-white fw-bold mt-md-5 mt-3">
-            Mulai Sewa Mobil
-          </button>
+          <Link to="/cars">
+            <button role="button" className="btn btn-green text-white fw-bold mt-md-5 mt-3">
+              Mulai Sewa Mobil
+            </button>
+          </Link>
         </div>
       </div>
     </section>
