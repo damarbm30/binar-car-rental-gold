@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
+
 import { facebook, instagram, twitter, mail, twitch, logo } from "../../assets";
 
 const Footer = () => {
@@ -10,18 +13,18 @@ const Footer = () => {
           <p className="fw-bold fs-6">081-233-334-808</p>
         </div>
         <div className="d-flex flex-column col-md-2 offset-md-1 gap-2">
-          <a to="#services" className="text-decoration-none text-black">
+          <HashLink to="/#services" className="text-decoration-none text-black">
             Our Services
-          </a>
-          <a href="#whyus" className="text-decoration-none text-black">
+          </HashLink>
+          <HashLink to="/#whyus" className="text-decoration-none text-black">
             Why Us
-          </a>
-          <a href="#testimonial" className="text-decoration-none text-black">
+          </HashLink>
+          <HashLink to="/#testimonial" className="text-decoration-none text-black">
             Testimonial
-          </a>
-          <a href="#faq" className="text-decoration-none text-black">
+          </HashLink>
+          <HashLink to="/#faq" className="text-decoration-none text-black">
             FAQ
-          </a>
+          </HashLink>
         </div>
         <div className="col-md-2 offset-md-1">
           <p className="fw-bold">Connect with us</p>
@@ -45,9 +48,9 @@ const Footer = () => {
         </div>
         <div className="col-md-2 offset-md-1">
           <p className="fw-bold">Copyright Binar 2022</p>
-          <a href="#">
+          <Link to="/">
             <img src={logo} alt="logo" className="mt-3" />
-          </a>
+          </Link>
         </div>
       </div>
     </footer>

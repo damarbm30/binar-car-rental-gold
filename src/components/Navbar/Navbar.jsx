@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
+
 import { logo } from "../../assets";
 import "./Navbar.css";
 
@@ -26,24 +27,24 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav offset-lg-8">
             <li className="nav-item">
-              <a className="nav-link text-black" href="#services">
+              <HashLink className="nav-link text-black" to="/#services">
                 Our Services
-              </a>
+              </HashLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-black" href="#whyus">
+              <HashLink className="nav-link text-black" to="/#whyus">
                 Why Us
-              </a>
+              </HashLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-black" href="#testimonial">
+              <HashLink className="nav-link text-black" to="/#testimonial">
                 Testimonial
-              </a>
+              </HashLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-black" href="#faq">
+              <HashLink className="nav-link text-black" to="/#faq">
                 FAQ
-              </a>
+              </HashLink>
             </li>
           </ul>
         </div>
