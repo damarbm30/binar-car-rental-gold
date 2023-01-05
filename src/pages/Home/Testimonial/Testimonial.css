@@ -1,0 +1,18 @@
+.carousel-control-prev,
+.carousel-control-next {
+  width: 20px !important;
+  height: 20px !important;
+  border: 1px solid gray !important;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: #ac5aaa !important;
+  border: 1px solid black !important;
+  filter: invert(1) grayscale(0);
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  padding: 8px !important;
+}

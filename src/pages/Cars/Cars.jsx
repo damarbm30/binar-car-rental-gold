@@ -1,4 +1,4 @@
-import { Header } from "../../container";
+import { Header } from "../../components";
 
 const Cars = () => {
   return (
