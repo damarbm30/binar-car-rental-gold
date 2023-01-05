@@ -1,5 +1,6 @@
 import "./Header.css";
 import { car } from "../../assets/index";
+import { Link } from "react-router-dom";
 
 const Header = ({ isHome }) => {
   return (
@@ -13,7 +14,13 @@ const Header = ({ isHome }) => {
                 Selamat datang di Binar Car Rental. Kami menyediakan mobil kualitas terbaik dengan harga terjangkau.
                 Selalu siap melayani kebutuhanmu untuk sewa mobil selama 24 jam.
               </p>
-              {isHome && <button className="btn btn-green text-white fw-bold mt-3">Mulai Sewa Mobil</button>}
+              {isHome && (
+                <Link to="/cars">
+                  <button role="button" className="btn btn-green text-white fw-bold mt-3">
+                    Mulai Sewa Mobil
+                  </button>
+                </Link>
+              )}
             </div>
             <img src={car} alt="car" className="col-xs-12 col header__img" />
           </div>
