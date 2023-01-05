@@ -1,0 +1,9 @@
+label,
+input,
+select {
+  font-size: 0.75rem !important;
+}
+
+.form-button {
+  width: 12.5% !important;
+}
