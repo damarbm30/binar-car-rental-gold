@@ -9,7 +9,7 @@ const TestimonialCard = ({ avatar, body, info, isActive }) => {
             <img src={avatar} alt="avatar" className="rounded-circle" />
             <div className="d-flex flex-column gap-2">
               <p>&#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2B50;</p>
-              <p className="fw-bold fs-7">{body}</p>
+              <p className="fw-bold">{body}</p>
               <p>{info}</p>
             </div>
           </div>
