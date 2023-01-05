@@ -7,14 +7,14 @@ const Form = () => {
         <div className="card-body row">
           <div className="col">
             <div>
-              <label for="carName" className="form-label">
+              <label htmlFor="carName" className="form-label">
                 Nama Mobil
               </label>
               <input type="text" className="form-control" id="carName" placeholder="Ketik nama/tipe mobil" />
             </div>
           </div>
           <div className="col">
-            <label for="carCategory" className="form-label">
+            <label htmlFor="carCategory" className="form-label">
               Kategori
             </label>
             <select id="carCategory" className="form-select text-muted">
@@ -25,7 +25,7 @@ const Form = () => {
             </select>
           </div>
           <div className="col">
-            <label for="carCategory" className="form-label">
+            <label htmlFor="carCategory" className="form-label">
               Harga
             </label>
             <select id="carCategory" className="form-select text-muted">
@@ -36,7 +36,7 @@ const Form = () => {
             </select>
           </div>
           <div className="col">
-            <label for="carCategory" className="form-label">
+            <label htmlFor="carCategory" className="form-label">
               Status
             </label>
             <select id="carCategory" className="form-select text-muted fw-bold">
