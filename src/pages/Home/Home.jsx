@@ -3,7 +3,7 @@ import { CTA, FAQ, Header, Services, Testimonial, WhyUs } from "../../container"
 const Home = () => {
   return (
     <main>
-      <Header />
+      <Header isHome />
       <Services />
       <WhyUs />
       <Testimonial />
