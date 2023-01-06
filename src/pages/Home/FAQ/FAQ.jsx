@@ -16,7 +16,7 @@ const FAQ = () => {
           <div className="accordion d-flex flex-column gap-3" id="accordionExample">
             {faqs.map((item) => {
               const { id, title, body } = item;
-              return <Accordion id={id} title={title} body={body} />;
+              return <Accordion id={id} title={title} body={body} key={id} />;
             })}
           </div>
         </div>
