@@ -5,18 +5,25 @@ import "./Form.css";
 
 const Form = () => {
   const { register, handleSubmit } = useForm();
+
+  const capitalizeFirstLetter = (string) => {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  };
+
   const onSubmit = (data) => {
     const { name, category, price, isRented } = data;
 
     const priceSplit = price.split("-");
-    const minPrice = priceSplit[0];
-    const maxPrice = priceSplit[1];
+    const minPrice = Number(priceSplit[0]);
+    const maxPrice = Number(priceSplit[1]);
 
-    getCars(name, category, minPrice, maxPrice, isRented);
+    const upperCaseCategory = capitalizeFirstLetter(category);
+
+    getCars(name, upperCaseCategory, minPrice, maxPrice, isRented);
   };
 
   return (
-    <form className="container position-relative" onSubmit={handleSubmit(onSubmit)}>
+    <form className="container position-relative section-pb" onSubmit={handleSubmit(onSubmit)}>
       <div className="card col-11 mx-auto position-absolute start-50 translate-middle">
         <div className="card-body row">
           <div className="col">
@@ -41,6 +48,7 @@ const Form = () => {
               <option value="" hidden>
                 Masukkan Kapasitas Mobil
               </option>
+              <option value="">-</option>
               <option value="small">2 - 4 orang</option>
               <option value="medium">4 - 6 orang</option>
               <option value="large">6 - 8 orang</option>
@@ -64,8 +72,8 @@ const Form = () => {
               Status
             </label>
             <select id="carCategory" className="form-select text-muted fw-bold" {...register("isRented")}>
-              <option value="false">Disewa</option>
-              <option value="true">Bisa dipakai</option>
+              <option value="false">Bisa dipakai</option>
+              <option value="true">Disewa</option>
             </select>
           </div>
           <div className="d-flex align-items-end form-button">
