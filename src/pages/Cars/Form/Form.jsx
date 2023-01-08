@@ -1,10 +1,19 @@
 import { useForm } from "react-hook-form";
+import { getCars } from "../../../services/carServices";
 
 import "./Form.css";
 
 const Form = () => {
   const { register, handleSubmit } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    const { name, category, price, isRented } = data;
+
+    const priceSplit = price.split("-");
+    const minPrice = priceSplit[0];
+    const maxPrice = priceSplit[1];
+
+    getCars(name, category, minPrice, maxPrice, isRented);
+  };
 
   return (
     <form className="container position-relative" onSubmit={handleSubmit(onSubmit)}>
@@ -47,14 +56,14 @@ const Form = () => {
               </option>
               <option value="0-399999">&lt; Rp400.000</option>
               <option value="400000-600000">Rp400.000 - Rp600.000</option>
-              <option value="400001-20000000">&gt; Rp600.000</option>
+              <option value="400001-2000000000">&gt; Rp600.000</option>
             </select>
           </div>
           <div className="col">
             <label htmlFor="carCategory" className="form-label">
               Status
             </label>
-            <select id="carCategory" className="form-select text-muted fw-bold" {...register("status")}>
+            <select id="carCategory" className="form-select text-muted fw-bold" {...register("isRented")}>
               <option value="false">Disewa</option>
               <option value="true">Bisa dipakai</option>
             </select>
