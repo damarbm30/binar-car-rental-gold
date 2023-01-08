@@ -1,6 +1,6 @@
 import api from "./baseUrl";
 
-export const getCars = async (name, category, minPrice, maxPrice, isRented) => {
+export const getCars = async (name, category, minPrice, maxPrice, isRented, setCars) => {
   try {
     const header = {
       headers: {
@@ -15,7 +15,7 @@ export const getCars = async (name, category, minPrice, maxPrice, isRented) => {
       header
     );
 
-    console.log(result.data.cars);
+    setCars(result.data.cars);
   } catch (error) {
     console.log(error);
   }
