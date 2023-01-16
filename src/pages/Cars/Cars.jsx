@@ -1,12 +1,7 @@
-import { useState } from "react";
-
-import { Header } from "../../components";
-import Search from "./Search";
+import { Header, Search } from "../../components";
 import CarList from "./CarList";
 
-const Cars = () => {
-  const [cars, setCars] = useState([]);
-
+const Cars = ({ cars, setCars }) => {
   return (
     <main>
       <Header />
