@@ -1,6 +1,6 @@
 import api from "./baseUrl";
 
-export const getCars = async (name, category, minPrice, maxPrice, isRented, setCars) => {
+export const getCars = async (setCars, data) => {
   try {
     const header = {
       headers: {
@@ -10,12 +10,38 @@ export const getCars = async (name, category, minPrice, maxPrice, isRented, setC
       },
     };
 
-    const result = await api.get(
-      `/admin/v2/car?name=${name}&category=${category}&isRented=${isRented}&minPrice=${minPrice}&maxPrice=${maxPrice}`,
-      header
-    );
+    const { name, category, price, isRented } = data || {};
 
-    setCars(result.data.cars);
+    if (typeof data === "undefined") {
+      const result = await api.get(`/admin/v2/car?name=&category=&isRented=&minPrice=&maxPrice=`, header);
+      setCars(result.data.cars);
+    } else {
+      const capitalizeFirstLetter = (string) => {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+      };
+
+      const priceSplit = price?.split("-");
+
+      if (priceSplit) {
+        const minPrice = Number(priceSplit[0]) || "";
+        const maxPrice = Number(priceSplit[1]) || "";
+
+        let newCategory = category;
+
+        if (category === "medium") {
+          newCategory = capitalizeFirstLetter(category);
+        }
+
+        const result = await api.get(
+          `/admin/v2/car?name=${name}&category=${newCategory}&isRented=${isRented}&minPrice=${minPrice}&maxPrice=${maxPrice}`,
+          header
+        );
+        setCars(result.data.cars);
+        console.log(
+          `/admin/v2/car?name=${name}&category=${newCategory}&isRented=${isRented}&minPrice=${minPrice}&maxPrice=${maxPrice}`
+        );
+      }
+    }
   } catch (error) {
     console.log(error);
   }
