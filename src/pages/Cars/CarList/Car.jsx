@@ -11,7 +11,7 @@ const Car = ({ id, name, price, image }) => {
 
   return (
     <div className="col-md-4 col-12">
-      <Link className="card text-decoration-none text-reset" to={`/car/${id}`}>
+      <div className="card">
         <div className="card-body d-flex flex-column gap-1">
           <div className="d-flex flex-column align-items-center justify-content-center">
             <img src={image} alt={name} height={160} className="rounded" />
@@ -22,8 +22,13 @@ const Car = ({ id, name, price, image }) => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             dolore magna aliqua.
           </p>
+          <Link to={`/car/${id}`} className="mt-3">
+            <button className="btn btn-green w-100 text-white fw-bold" role="button">
+              Pilih Mobil
+            </button>
+          </Link>
         </div>
-      </Link>
+      </div>
     </div>
   );
 };
