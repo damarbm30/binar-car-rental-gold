@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Car = ({ id, name, price, image }) => {
   const formatter = new Intl.NumberFormat("id-ID", {
     style: "currency",
@@ -9,7 +11,7 @@ const Car = ({ id, name, price, image }) => {
 
   return (
     <div className="col-md-4 col-12">
-      <div className="card">
+      <Link className="card text-decoration-none text-reset" to={`/car/${id}`}>
         <div className="card-body d-flex flex-column gap-1">
           <div className="d-flex flex-column align-items-center justify-content-center">
             <img src={image} alt={name} height={160} className="rounded" />
@@ -21,7 +23,7 @@ const Car = ({ id, name, price, image }) => {
             dolore magna aliqua.
           </p>
         </div>
-      </div>
+      </Link>
     </div>
   );
 };
