@@ -1,5 +1,6 @@
 .header {
   background-color: var(--bgColor);
+  min-height: 200px;
 }
 
 .header__item {
