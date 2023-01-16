@@ -37,9 +37,6 @@ export const getCars = async (setCars, data) => {
           header
         );
         setCars(result.data.cars);
-        console.log(
-          `/admin/v2/car?name=${name}&category=${newCategory}&isRented=${isRented}&minPrice=${minPrice}&maxPrice=${maxPrice}`
-        );
       }
     }
   } catch (error) {
