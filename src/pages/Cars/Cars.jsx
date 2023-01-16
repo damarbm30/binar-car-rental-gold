@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import { Header, Search } from "../../components";
 import CarList from "./CarList";
 
