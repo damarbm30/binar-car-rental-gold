@@ -1,5 +1,6 @@
-import Navbar from "./Navbar/Navbar";
-import Header from "./Header/Header";
-import Footer from "./Footer/Footer";
+import Navbar from "./Navbar";
+import Header from "./Header";
+import Footer from "./Footer";
+import Search from "./Search";
 
-export { Navbar, Header, Footer };
+export { Navbar, Header, Footer, Search };
