@@ -26,7 +26,7 @@ function App() {
           path="/cars"
           element={<Cars cars={cars} setCars={setCars} isFiltered={isFiltered} setIsFiltered={setIsFiltered} />}
         />
-        <Route index path="/car/:carId" element={<CarDetail cars={cars} setCars={setCars} />} />
+        <Route index path="/car/:carId" element={<CarDetail cars={cars} setCars={setCars} isFiltered={isFiltered} />} />
       </Routes>
       <Footer />
     </>
