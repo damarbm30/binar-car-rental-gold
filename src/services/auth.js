@@ -7,7 +7,6 @@ export const userLogin = async () => {
       password: "123456",
     };
     const result = await api.post("/customer/auth/login", userCredentials);
-    console.log(result.data);
   } catch (error) {
     console.log(error);
   }
