@@ -3,7 +3,7 @@ import Car from "./Car";
 const CarList = ({ cars }) => {
   return (
     <div className="container d-flex justify-content-center">
-      <div className="row justify-content-center gy-3" style={{ width: "95%" }}>
+      <div className="row justify-content-center gy-3" style={{ width: "93.33%" }}>
         {cars?.length
           ? cars.map((item) => {
               const { id, name, price, image } = item;
