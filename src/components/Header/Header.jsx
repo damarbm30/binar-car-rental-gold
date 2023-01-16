@@ -3,10 +3,6 @@ import { car } from "../../assets";
 import { Link } from "react-router-dom";
 
 const Header = ({ isHome, isFiltered }) => {
-  // const { isHome, isFiltered } = props;
-  console.log("Header isHome: ", isHome);
-  console.log("Header isFiltered: ", isFiltered);
-
   return (
     <>
       <header className="header">
