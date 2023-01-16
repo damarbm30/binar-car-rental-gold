@@ -13,7 +13,7 @@ const Search = ({ setCars, setIsFiltered, isDetail }) => {
 
   return (
     <form className="container position-relative section-pb" onSubmit={handleSubmit(onSubmit)}>
-      <div className="card col-11 mx-auto position-absolute start-50 translate-middle">
+      <div className="card col-11 mx-auto position-absolute start-50 translate-middle shadow">
         <div className="card-body row">
           <div className="col">
             <div>
