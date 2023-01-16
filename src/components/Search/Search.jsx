@@ -3,10 +3,11 @@ import { getCars } from "../../services/carServices";
 
 import "./Search.css";
 
-const Search = ({ setCars }) => {
+const Search = ({ setCars, setIsFiltered }) => {
   const { register, handleSubmit } = useForm();
 
   const onSubmit = (data) => {
+    setIsFiltered(true);
     getCars(setCars, data);
   };
 
