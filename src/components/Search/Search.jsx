@@ -3,7 +3,7 @@ import { getCars } from "../../services/carServices";
 
 import "./Search.css";
 
-const Search = ({ setCars, setIsFiltered }) => {
+const Search = ({ setCars, setIsFiltered, isDetail }) => {
   const { register, handleSubmit } = useForm();
 
   const onSubmit = (data) => {
@@ -25,6 +25,7 @@ const Search = ({ setCars, setIsFiltered }) => {
                 id="name"
                 className="form-control"
                 placeholder="Ketik nama/tipe mobil"
+                disabled={isDetail ? true : false}
                 {...register("name")}
               />
             </div>
@@ -33,7 +34,12 @@ const Search = ({ setCars, setIsFiltered }) => {
             <label htmlFor="carCategory" className="form-label">
               Kategori
             </label>
-            <select id="carCategory" className="form-select text-muted" {...register("category")}>
+            <select
+              id="carCategory"
+              className="form-select text-muted"
+              disabled={isDetail ? true : false}
+              {...register("category")}
+            >
               <option value="" hidden>
                 Masukkan Kapasitas Mobil
               </option>
@@ -47,7 +53,12 @@ const Search = ({ setCars, setIsFiltered }) => {
             <label htmlFor="carCategory" className="form-label">
               Harga
             </label>
-            <select id="carCategory" className="form-select text-muted" {...register("price")}>
+            <select
+              id="carCategory"
+              className="form-select text-muted"
+              disabled={isDetail ? true : false}
+              {...register("price")}
+            >
               <option value="" hidden>
                 Masukkan Harga Sewa per Hari
               </option>
@@ -60,13 +71,23 @@ const Search = ({ setCars, setIsFiltered }) => {
             <label htmlFor="carCategory" className="form-label">
               Status
             </label>
-            <select id="carCategory" className="form-select text-muted fw-bold" {...register("isRented")}>
+            <select
+              id="carCategory"
+              className="form-select text-muted fw-bold"
+              disabled={isDetail ? true : false}
+              {...register("isRented")}
+            >
               <option value="false">Bisa dipakai</option>
               <option value="true">Disewa</option>
             </select>
           </div>
           <div className="d-flex align-items-end form-button">
-            <button role="button" type="submit" className="btn btn-green text-white fw-bold">
+            <button
+              role="button"
+              type="submit"
+              className="btn btn-green text-white fw-bold"
+              disabled={isDetail ? true : false}
+            >
               Cari Mobil
             </button>
           </div>
