@@ -13,18 +13,26 @@ const Footer = () => {
           <p className="fw-bold fs-6">081-233-334-808</p>
         </div>
         <div className="d-flex flex-column col-md-2 offset-md-1 gap-2">
-          <HashLink to="/#services" className="text-decoration-none text-black">
-            Our Services
-          </HashLink>
-          <HashLink to="/#whyus" className="text-decoration-none text-black">
-            Why Us
-          </HashLink>
-          <HashLink to="/#testimonial" className="text-decoration-none text-black">
-            Testimonial
-          </HashLink>
-          <HashLink to="/#faq" className="text-decoration-none text-black">
-            FAQ
-          </HashLink>
+          <p>
+            <HashLink to="/#services" className="text-decoration-none text-black">
+              Our Services
+            </HashLink>
+          </p>
+          <p>
+            <HashLink to="/#whyus" className="text-decoration-none text-black">
+              Why Us
+            </HashLink>
+          </p>
+          <p>
+            <HashLink to="/#testimonial" className="text-decoration-none text-black">
+              Testimonial
+            </HashLink>
+          </p>
+          <p>
+            <HashLink to="/#faq" className="text-decoration-none text-black">
+              FAQ
+            </HashLink>
+          </p>
         </div>
         <div className="col-md-2 offset-md-1">
           <p className="fw-bold">Connect with us</p>
