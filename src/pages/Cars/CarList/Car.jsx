@@ -8,7 +8,7 @@ const Car = ({ id, name, price, image }) => {
   const formattedPrice = formatter.format(price);
 
   return (
-    <div className="col-4">
+    <div className="col-md-4 col-12">
       <div className="card">
         <div className="card-body d-flex flex-column gap-1">
           <div className="d-flex flex-column align-items-center justify-content-center">
