@@ -11,5 +11,21 @@ import twitter from "./icon_twitter.svg";
 import car from "./img_car.svg";
 import service from "./img_service.svg";
 import logo from "./logo.svg";
+import users from "./fi_users.svg";
 
-export { time, check, like, facebook, instagram, mail, price, professional, twitch, twitter, car, service, logo };
+export {
+  time,
+  check,
+  like,
+  facebook,
+  instagram,
+  mail,
+  price,
+  professional,
+  twitch,
+  twitter,
+  car,
+  service,
+  logo,
+  users,
+};
