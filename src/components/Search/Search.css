@@ -13,3 +13,9 @@ select {
   border-color: var(--green);
   box-shadow: none;
 }
+
+@media only screen and (max-width: 768px) {
+  .form-button {
+    width: 100% !important;
+  }
+}

@@ -15,7 +15,7 @@ const Search = ({ setCars, setIsFiltered, isDetail }) => {
     <form className="container position-relative section-pb" onSubmit={handleSubmit(onSubmit)}>
       <div className="card col-11 mx-auto position-absolute start-50 translate-middle shadow">
         <div className="card-body row">
-          <div className="col">
+          <div className="col-md col-12">
             <div>
               <label htmlFor="name" className="form-label">
                 Nama Mobil
@@ -30,7 +30,7 @@ const Search = ({ setCars, setIsFiltered, isDetail }) => {
               />
             </div>
           </div>
-          <div className="col">
+          <div className="col-md col-12">
             <label htmlFor="carCategory" className="form-label">
               Kategori
             </label>
@@ -49,7 +49,7 @@ const Search = ({ setCars, setIsFiltered, isDetail }) => {
               <option value="large">6 - 8 orang</option>
             </select>
           </div>
-          <div className="col">
+          <div className="col-md col-12">
             <label htmlFor="carCategory" className="form-label">
               Harga
             </label>
@@ -67,7 +67,7 @@ const Search = ({ setCars, setIsFiltered, isDetail }) => {
               <option value="400001-2000000000">&gt; Rp600.000</option>
             </select>
           </div>
-          <div className="col">
+          <div className="col-md col-12">
             <label htmlFor="carCategory" className="form-label">
               Status
             </label>
@@ -81,7 +81,7 @@ const Search = ({ setCars, setIsFiltered, isDetail }) => {
               <option value="true">Disewa</option>
             </select>
           </div>
-          <div className="d-flex align-items-end form-button">
+          <div className="d-flex align-items-end justify-content-center form-button mt-3">
             <button
               role="button"
               type="submit"

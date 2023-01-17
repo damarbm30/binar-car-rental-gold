@@ -36,8 +36,28 @@ const CarDetail = ({ cars, setCars, isFiltered }) => {
       <Search setCars={setCars} isDetail />
       <main>
         <div className="container d-flex justify-content-center">
-          <div className="row justify-content-center gx-3" style={{ width: "93.33%" }}>
-            <div className="col-md-8">
+          <div className="row justify-content-center g-3" style={{ width: "93.33%" }}>
+            <div className="col-md-4 order-md-2">
+              <div className="card shadow-sm">
+                <div className="card-body">
+                  <img src={image} alt={name} className="img-fluid mb-1 rounded" />
+                  <div>
+                    <p className="fw-bold mb-1">{name}</p>
+                    <div className="d-flex gap-1" style={{ marginBottom: "3.4375rem" }}>
+                      <img src={users} alt="users" />
+                      <p className="fw-bold text-secondary" style={{ fontSize: "0.625rem" }}>
+                        {peopleCap}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="d-flex justify-content-between fw-bold">
+                    <p>Total</p>
+                    <span>{formattedPrice}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-8 order-md-1">
               <div className="card shadow-sm">
                 <div className="card-body">
                   <p className="fw-bold mb-3">Tentang Paket</p>
@@ -66,26 +86,6 @@ const CarDetail = ({ cars, setCars, isFiltered }) => {
                     <li>Jika overtime lebih dari 12 jam akan ada tambahan biaya Rp 20.000/jam</li>
                     <li>Tidak termasuk akomodasi penginapan</li>
                   </ul>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-4">
-              <div className="card shadow-sm">
-                <div className="card-body">
-                  <img src={image} alt={name} className="img-fluid mb-1 rounded" />
-                  <div>
-                    <p className="fw-bold mb-1">{name}</p>
-                    <div className="d-flex gap-1" style={{ marginBottom: "3.4375rem" }}>
-                      <img src={users} alt="users" />
-                      <p className="fw-bold text-secondary" style={{ fontSize: "0.625rem" }}>
-                        {peopleCap}
-                      </p>
-                    </div>
-                  </div>
-                  <div className="d-flex justify-content-between fw-bold">
-                    <p>Total</p>
-                    <span>{formattedPrice}</span>
-                  </div>
                 </div>
               </div>
             </div>
