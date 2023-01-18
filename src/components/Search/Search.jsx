@@ -3,7 +3,7 @@ import { getCars } from "../../services/carServices";
 
 import "./Search.css";
 
-const Search = ({ setCars, setIsFiltered, isDetail }) => {
+const Search = ({ setCars, setIsFiltered, isDetail, isFiltered }) => {
   const { register, handleSubmit } = useForm();
 
   const onSubmit = (data) => {
@@ -12,8 +12,11 @@ const Search = ({ setCars, setIsFiltered, isDetail }) => {
   };
 
   return (
-    <form className="container position-relative section-pb" onSubmit={handleSubmit(onSubmit)}>
-      <div className="card col-11 mx-auto position-absolute start-50 translate-middle shadow">
+    <form
+      className={`container search__container ${isFiltered || isDetail ? "mb-5" : ""}`}
+      onSubmit={handleSubmit(onSubmit)}
+    >
+      <div className="card col-11 mx-auto shadow search__wrapper">
         <div className="card-body row">
           <div className="col-md col-12">
             <div>
