@@ -10,13 +10,11 @@ const CTA = () => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna aliqua.
         </p>
-        <div>
-          <Link to="/cars">
-            <button role="button" className="btn btn-green text-white fw-bold mt-md-5 mt-3">
-              Mulai Sewa Mobil
-            </button>
-          </Link>
-        </div>
+        <Link to="/cars" className="d-flex justify-content-center text-reset text-decoration-none">
+          <button role="button" className="btn btn-green text-white fw-bold mt-md-5 mt-3">
+            Mulai Sewa Mobil
+          </button>
+        </Link>
       </div>
     </section>
   );
