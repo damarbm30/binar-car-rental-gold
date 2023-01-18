@@ -13,7 +13,7 @@ const Car = ({ id, name, price, image }) => {
     <div className="col-md-4 col-12">
       <div className="card">
         <div className="card-body d-flex flex-column gap-1">
-          <div className="d-flex flex-column align-items-center justify-content-center">
+          <div className="d-flex flex-column align-items-lg-center justify-content-center">
             <img src={image} alt={name} height={160} className="rounded" />
           </div>
           <p className="mt-4">{name}</p>
