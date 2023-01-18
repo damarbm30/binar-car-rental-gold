@@ -5,7 +5,7 @@ const Cars = ({ cars, setCars, isFiltered, setIsFiltered }) => {
   return (
     <main>
       <Header isFiltered={isFiltered} />
-      <Search setCars={setCars} setIsFiltered={setIsFiltered} />
+      <Search setCars={setCars} setIsFiltered={setIsFiltered} isFiltered={isFiltered} />
       <CarList cars={cars} setCars={setCars} />
     </main>
   );
