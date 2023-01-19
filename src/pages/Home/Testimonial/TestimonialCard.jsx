@@ -2,7 +2,7 @@ import "./Testimonial.css";
 
 const TestimonialCard = ({ avatar, body, info }) => {
   return (
-    <div className="col-lg-4 col-md-12">
+    <div className="col-lg-4 col-md-6 col-sm-12">
       <div className="card testimonial-card mx-4">
         <div className="card-body d-flex align-items-center gap-3">
           <img src={avatar} alt="avatar" className="rounded-circle" />
