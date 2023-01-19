@@ -23,7 +23,7 @@ const Header = ({ isHome, isFiltered }) => {
                   </Link>
                 )}
               </div>
-              <img src={car} alt="car" className="col-xs-12 col header__img" />
+              <img src={car} alt="car" className="col-12 col-md-6 header__img" />
             </div>
           ) : (
             ""
