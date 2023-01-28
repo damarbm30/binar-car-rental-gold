@@ -30,7 +30,7 @@ const Testimonial = () => {
       </div>
       <div id="carouselExampleControls" className="carousel carousel-dark slide" data-bs-ride="false">
         <div className="carousel-inner overflow-visible" role="listbox">
-          {testimonials.map((testimonial) => {
+          {testimonials?.map((testimonial) => {
             const { id, avatar, body, info, isActive } = testimonial;
             return (
               <div className={`carousel-item ${isActive === "active" ? "active" : ""}`} key={id}>
