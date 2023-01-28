@@ -1,8 +1,6 @@
 import Car from "./Car";
 
 const CarList = ({ cars }) => {
-  console.log(cars);
-
   return (
     <div className="container d-flex justify-content-center">
       <div className="row justify-content-center gy-3" style={{ width: "93.33%" }}>

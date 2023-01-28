@@ -22,12 +22,6 @@ export const getCars = async (setCars, data) => {
         const minPrice = parseInt(priceSplit[0]) || "";
         const maxPrice = parseInt(priceSplit[1]) || "";
 
-        console.log("Min Price: ", typeof minPrice);
-        console.log("Max Price: ", typeof maxPrice);
-        console.log(
-          `/admin/v2/car?name=${name}&category=${category}&isRented=${isRented}&minPrice=${minPrice}&maxPrice=${maxPrice}`
-        );
-
         const result = await api.get(
           `/admin/v2/car?name=${name}&category=${category}&isRented=${isRented}&minPrice=${minPrice}&maxPrice=${maxPrice}`,
           header
