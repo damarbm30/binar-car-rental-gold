@@ -16,24 +16,20 @@ export const getCars = async (setCars, data) => {
       const result = await api.get(`/admin/v2/car?name=&category=&isRented=&minPrice=&maxPrice=`, header);
       setCars(result.data.cars);
     } else {
-      const capitalizeFirstLetter = (string) => {
-        return string.charAt(0).toUpperCase() + string.slice(1);
-      };
-
       const priceSplit = price?.split("-");
 
       if (priceSplit) {
-        const minPrice = Number(priceSplit[0]) || "";
-        const maxPrice = Number(priceSplit[1]) || "";
+        const minPrice = parseInt(priceSplit[0]) || "";
+        const maxPrice = parseInt(priceSplit[1]) || "";
 
-        let newCategory = category;
-
-        if (category === "medium") {
-          newCategory = capitalizeFirstLetter(category);
-        }
+        console.log("Min Price: ", typeof minPrice);
+        console.log("Max Price: ", typeof maxPrice);
+        console.log(
+          `/admin/v2/car?name=${name}&category=${category}&isRented=${isRented}&minPrice=${minPrice}&maxPrice=${maxPrice}`
+        );
 
         const result = await api.get(
-          `/admin/v2/car?name=${name}&category=${newCategory}&isRented=${isRented}&minPrice=${minPrice}&maxPrice=${maxPrice}`,
+          `/admin/v2/car?name=${name}&category=${category}&isRented=${isRented}&minPrice=${minPrice}&maxPrice=${maxPrice}`,
           header
         );
         setCars(result.data.cars);
