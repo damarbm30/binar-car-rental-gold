@@ -67,7 +67,7 @@ const Search = ({ setCars, setIsFiltered, isDetail, isFiltered }) => {
               </option>
               <option value="0-399999">&lt; Rp400.000</option>
               <option value="400000-600000">Rp400.000 - Rp600.000</option>
-              <option value="400001-2000000000">&gt; Rp600.000</option>
+              <option value="600001">&gt; Rp600.000</option>
             </select>
           </div>
           <div className="col-md col-12">
