@@ -3,11 +3,12 @@ import { getCars } from "../../services/carServices";
 
 import "./Search.css";
 
-const Search = ({ setCars, setIsFiltered, isDetail, isFiltered }) => {
+const Search = ({ setCars, setIsFiltered, isDetail, isFiltered, setSearchFocus }) => {
   const { register, handleSubmit } = useForm();
 
   const onSubmit = (data) => {
     setIsFiltered(true);
+    setSearchFocus(false);
     getCars(setCars, data);
   };
 
@@ -18,7 +19,7 @@ const Search = ({ setCars, setIsFiltered, isDetail, isFiltered }) => {
     >
       <div className="card col-11 mx-auto shadow search__wrapper">
         <div className="card-body row">
-          <div className="col-md col-12">
+          <div className="col-md col-12" onFocus={() => setSearchFocus(true)} onBlur={() => setSearchFocus(false)}>
             <div>
               <label htmlFor="name" className="form-label">
                 Nama Mobil
@@ -33,7 +34,7 @@ const Search = ({ setCars, setIsFiltered, isDetail, isFiltered }) => {
               />
             </div>
           </div>
-          <div className="col-md col-12">
+          <div className="col-md col-12" onFocus={() => setSearchFocus(true)} onBlur={() => setSearchFocus(false)}>
             <label htmlFor="carCategory" className="form-label">
               Kategori
             </label>
@@ -52,7 +53,7 @@ const Search = ({ setCars, setIsFiltered, isDetail, isFiltered }) => {
               <option value="large">6 - 8 orang</option>
             </select>
           </div>
-          <div className="col-md col-12">
+          <div className="col-md col-12" onFocus={() => setSearchFocus(true)} onBlur={() => setSearchFocus(false)}>
             <label htmlFor="carCategory" className="form-label">
               Harga
             </label>
@@ -70,7 +71,7 @@ const Search = ({ setCars, setIsFiltered, isDetail, isFiltered }) => {
               <option value="600001">&gt; Rp600.000</option>
             </select>
           </div>
-          <div className="col-md col-12">
+          <div className="col-md col-12" onFocus={() => setSearchFocus(true)} onBlur={() => setSearchFocus(false)}>
             <label htmlFor="carCategory" className="form-label">
               Status
             </label>
