@@ -8,7 +8,7 @@ const Header = ({ isHome, isFiltered }) => {
       <header className="header">
         <div className="container-fluid">
           {!isFiltered ? (
-            <div className="header__items row align-items-center justify-content-end">
+            <div className="row align-items-center justify-content-end">
               <div className="header__item col-12 col-md offset-1">
                 <h1 className="fw-bold">Sewa & Rental Mobil Terbaik di kawasan Yogyakarta</h1>
                 <p className="col-9 mt-3 text-dark fw-bold">
