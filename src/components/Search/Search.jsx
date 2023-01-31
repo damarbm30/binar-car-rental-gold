@@ -18,8 +18,8 @@ const Search = ({ setCars, setIsFiltered, isDetail, isFiltered, setSearchFocus }
       onSubmit={handleSubmit(onSubmit)}
     >
       <div className="card col-11 mx-auto shadow search__wrapper">
-        <div className="card-body row">
-          <div className="col-md col-12" onFocus={() => setSearchFocus(true)} onBlur={() => setSearchFocus(false)}>
+        <div className="card-body row" onFocus={() => setSearchFocus(true)} onBlur={() => setSearchFocus(false)}>
+          <div className="col-md col-12">
             <div>
               <label htmlFor="name" className="form-label">
                 Nama Mobil
@@ -34,7 +34,7 @@ const Search = ({ setCars, setIsFiltered, isDetail, isFiltered, setSearchFocus }
               />
             </div>
           </div>
-          <div className="col-md col-12" onFocus={() => setSearchFocus(true)} onBlur={() => setSearchFocus(false)}>
+          <div className="col-md col-12">
             <label htmlFor="carCategory" className="form-label">
               Kategori
             </label>
@@ -53,7 +53,7 @@ const Search = ({ setCars, setIsFiltered, isDetail, isFiltered, setSearchFocus }
               <option value="large">6 - 8 orang</option>
             </select>
           </div>
-          <div className="col-md col-12" onFocus={() => setSearchFocus(true)} onBlur={() => setSearchFocus(false)}>
+          <div className="col-md col-12">
             <label htmlFor="carCategory" className="form-label">
               Harga
             </label>
@@ -71,7 +71,7 @@ const Search = ({ setCars, setIsFiltered, isDetail, isFiltered, setSearchFocus }
               <option value="600001">&gt; Rp600.000</option>
             </select>
           </div>
-          <div className="col-md col-12" onFocus={() => setSearchFocus(true)} onBlur={() => setSearchFocus(false)}>
+          <div className="col-md col-12">
             <label htmlFor="carCategory" className="form-label">
               Status
             </label>
