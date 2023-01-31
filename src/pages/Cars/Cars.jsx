@@ -12,7 +12,7 @@ const Cars = ({ cars, setCars, isFiltered, setIsFiltered }) => {
       <Header isFiltered={isFiltered} />
       <Search setCars={setCars} setIsFiltered={setIsFiltered} isFiltered={isFiltered} setSearchFocus={setSearchFocus} />
       <CarList cars={cars} setCars={setCars} />
-      <div className={`${searchFocus ? "overlay" : ""}`}></div>
+      <div className={`${searchFocus ? "overlay" : "overlay-hide"}`}></div>
     </main>
   );
 };

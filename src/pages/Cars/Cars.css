@@ -1,10 +1,21 @@
 .overlay {
   position: fixed;
-  display: block;
   left: 0;
   top: 0;
   right: 0;
   bottom: 0;
   z-index: 9999;
-  background: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+
+.overlay-hide {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0);
+  transition: all 0.3s ease-in-out;
 }
