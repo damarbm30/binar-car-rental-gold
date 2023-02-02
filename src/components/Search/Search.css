@@ -7,7 +7,7 @@ select {
 .search__container {
   position: relative;
   padding-bottom: 6.25em;
-  z-index: 9999999;
+  z-index: 1000;
 }
 
 .search__wrapper {
