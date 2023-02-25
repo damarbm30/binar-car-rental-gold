@@ -1,24 +1,42 @@
 import { useForm } from "react-hook-form";
 import { getCars } from "../../services/carServices";
+import useCar from "../../store/carList";
 
 import "./Search.css";
 
-const Search = ({ setCars, setIsFiltered, isDetail, isFiltered, setSearchFocus }) => {
+const Search = ({
+  setCars,
+  setIsFiltered,
+  isDetail,
+  isFiltered,
+  setSearchFocus,
+}) => {
   const { register, handleSubmit } = useForm();
+  const setCarList = useCar((state) => state.setCarList);
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     setIsFiltered(true);
     setSearchFocus(false);
-    getCars(setCars, data);
+    const result = await getCars(setCars, data);
+    setCarList({
+      carList: result,
+      total: result?.length,
+    });
   };
 
   return (
     <form
-      className={`container search__container ${isFiltered || isDetail ? "mb-5" : ""}`}
+      className={`container search__container ${
+        isFiltered || isDetail ? "mb-5" : ""
+      }`}
       onSubmit={handleSubmit(onSubmit)}
     >
       <div className="card col-11 mx-auto shadow search__wrapper">
-        <div className="card-body row" onFocus={() => setSearchFocus(true)} onBlur={() => setSearchFocus(false)}>
+        <div
+          className="card-body row"
+          onFocus={() => setSearchFocus(true)}
+          onBlur={() => setSearchFocus(false)}
+        >
           <div className="col-md col-12">
             <div>
               <label htmlFor="name" className="form-label">
