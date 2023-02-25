@@ -11,10 +11,10 @@ export const getCars = async (setCars, data) => {
     };
 
     const { name, category, price, isRented } = data || {};
+    let result;
 
     if (typeof data === "undefined") {
-      const result = await api.get(`/admin/v2/car?name=&category=&isRented=&minPrice=&maxPrice=`, header);
-      setCars(result.data.cars);
+      result = await api.get(`/admin/v2/car`, header);
     } else {
       const priceSplit = price?.split("-");
 
@@ -22,13 +22,17 @@ export const getCars = async (setCars, data) => {
         const minPrice = parseInt(priceSplit[0]) || "";
         const maxPrice = parseInt(priceSplit[1]) || "";
 
-        const result = await api.get(
+        result = await api.get(
           `/admin/v2/car?name=${name}&category=${category}&isRented=${isRented}&minPrice=${minPrice}&maxPrice=${maxPrice}`,
           header
         );
-        setCars(result.data.cars);
       }
     }
+
+    setCars(result.data.cars);
+    console.log("Result = ", result?.data?.cars);
+
+    return result?.data?.cars;
   } catch (error) {
     console.log(error);
   }
